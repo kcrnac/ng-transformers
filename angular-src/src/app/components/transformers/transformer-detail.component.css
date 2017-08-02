@@ -1,0 +1,4 @@
+#gears_table_container {
+    max-height: 300px;
+    overflow-y: auto;
+}

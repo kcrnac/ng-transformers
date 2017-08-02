@@ -1,0 +1,206 @@
+{
+    "factions": [
+        /* 1 */
+        {
+            "_id" : "597cf4b4734d1d58c9abb651",
+            "name" : "Decepticon"
+        },
+
+        /* 2 */
+        {
+            "_id" : "59824b3410983369be8285e9",
+            "name" : "Autobot"
+        }
+    ],
+    "vehicles": [
+        /* 1 */
+        {
+            "_id" : "59824bab10983369be8285eb",
+            "group" : "Air",
+            "type" : "Plane",
+            "model" : "F-22"
+        },
+
+        /* 2 */
+        {
+            "_id" : "59824bb710983369be8285ec",
+            "group" : "Air",
+            "type" : "Plane",
+            "model" : "F-22"
+        },
+
+        /* 3 */
+        {
+            "_id" : "59824bbf10983369be8285ed",
+            "group" : "Air",
+            "type" : "Plane",
+            "model" : "Sukhoi"
+        },
+
+        /* 4 */
+        {
+            "_id" : "59824bc710983369be8285ee",
+            "group" : "Air",
+            "type" : "Plane",
+            "model" : "MiG"
+        },
+
+        /* 5 */
+        {
+            "_id" : "59824bd010983369be8285ef",
+            "group" : "Air",
+            "type" : "Helicopter",
+            "model" : "Apache"
+        },
+
+        /* 6 */
+        {
+            "_id" : "59824bd810983369be8285f0",
+            "group" : "Air",
+            "type" : "Helicopter",
+            "model" : "Kamov"
+        },
+
+        /* 7 */
+        {
+            "_id" : "59824be010983369be8285f1",
+            "group" : "Sea",
+            "type" : "Boat",
+            "model" : "Sailboat"
+        },
+
+        /* 8 */
+        {
+            "_id" : "59824be510983369be8285f2",
+            "group" : "Sea",
+            "type" : "Boat",
+            "model" : "Jetboat"
+        },
+
+        /* 9 */
+        {
+            "_id" : "59824beb10983369be8285f3",
+            "group" : "Sea",
+            "type" : "Submarine",
+            "model" : "Standard"
+        },
+
+        /* 10 */
+        {
+            "_id" : "59824bf210983369be8285f4",
+            "group" : "Land",
+            "type" : "Car",
+            "model" : "Camaro"
+        },
+
+        /* 11 */
+        {
+            "_id" : "59824bf910983369be8285f5",
+            "group" : "Land",
+            "type" : "Car",
+            "model" : "AMG GT R"
+        },
+
+        /* 12 */
+        {
+            "_id" : "59824bff10983369be8285f6",
+            "group" : "Land",
+            "type" : "Car",
+            "model" : "Lamborghini"
+        },
+
+        /* 13 */
+        {
+            "_id" : "59824c0610983369be8285f7",
+            "group" : "Land",
+            "type" : "Truck",
+            "model" : "Unimog"
+        },
+
+        /* 14 */
+        {
+            "_id" : "59824c0c10983369be8285f8",
+            "group" : "Land",
+            "type" : "Truck",
+            "model" : "Western Star 5700"
+        }
+    ],
+    "transformers": [
+        /* 1 */
+        {
+            "_id" : "59824d2310983369be8285f9",
+            "name" : "Optimus Prime",
+            "vehicle" : {
+                "group" : "Land",
+                "type" : "Truck",
+                "model" : "Western Star 5700"
+            },
+            "gear" : [ 
+                "sword", 
+                "shield"
+            ],
+            "status" : "OK",
+            "faction" : {
+                "_id" : "59824b3410983369be8285e9",
+                "name" : "Autobot"
+            }
+        },
+
+        /* 2 */
+        {
+            "_id" : "59824f9b10983369be8285fa",
+            "name" : "Bumblebee",
+            "vehicle" : {
+                "group" : "Land",
+                "type" : "Car",
+                "model" : "Camaro"
+            },
+            "gear" : [ 
+                "machine gun"
+            ],
+            "status" : "INJURED",
+            "faction" : {
+                "_id" : "59824b3410983369be8285e9",
+                "name" : "Autobot"
+            }
+        },
+
+        /* 3 */
+        {
+            "_id" : "59824fbf689f8d1ab4212973",
+            "name" : "Megatron",
+            "vehicle" : {
+                "group" : "Air",
+                "type" : "Plane",
+                "model" : "Sukhoi"
+            },
+            "gears" : [ 
+                "canon"
+            ],
+            "status" : "MIA",
+            "faction" : {
+                "_id" : "597cf4b4734d1d58c9abb651",
+                "name" : "Decepticon"
+            }
+        },
+
+        /* 4 */
+        {
+            "_id" : "59825190689f8d1ab4212974",
+            "name" : "test",
+            "vehicle" : {
+                "group" : "Air",
+                "type" : "Helicopter",
+                "model" : "Kamov"
+            },
+            "gears" : [ 
+                "ewfef"
+            ],
+            "status" : "INJURED",
+            "faction" : {
+                "_id" : "59824b3410983369be8285e9",
+                "name" : "Autobot"
+            }
+        }
+    ]
+}

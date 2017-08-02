@@ -1,0 +1,12 @@
+install node packages
+->npm install
+
+run server:
+->node app.js
+
+run server.js and ng app:
+->ng build && node app.js
+
+
+- Prvo je potrebno napraviti build ng applikacije, koja exporta sve fileove u [root]/public
+- Nakon pokretanja node app, pokreće se app.js koji gleda public folder i pokreće ujedno api server

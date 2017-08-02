@@ -1,0 +1,34 @@
+<h3>Factions</h3>
+
+<div class="row">
+    <div class="col-md-12 m-b-15">
+        <form class="form-inline">
+            <div class="form-group">
+                <label>Name</label>
+                <input [(ngModel)]="factionName" required name="factionName" id="factionName" class="form-control" />
+                <button class="btn btn-primary" (click)="addFaction()">Add</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-12">
+        <div id="factions_table_container">
+            <table class="table table-bordered table-responsive table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th class="text-center col-md-2">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let f of factions">
+                        <td>{{f.name}}</td>
+                        <td class="text-center">
+                            <i class="glyphicon glyphicon-remove text-danger" (click)="deleteFaction(f)"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

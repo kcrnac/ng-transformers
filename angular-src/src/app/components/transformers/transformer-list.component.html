@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-md-12">
+        <h2>Transformers</h2>
+    </div>
+    <div class="col-md-12 m-b-15">
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="filter"></label>
+                <input [(ngModel)]="searchParam" id="search" class="form-control" name="search" />
+            </div>
+            <button class="btn btn-primary" (click)="search()">Search</button>
+            <button class="btn btn-default" (click)="clear()">Clear</button>
+            <div class="form-group">
+                <select class="form-control" [(ngModel)]="factionFilter" (change)="onFactionChange()" name="faction">
+                    <option [ngValue]="null"></option>
+                    <option *ngFor="let faction of factions" [ngValue]="faction" >{{faction.name}}</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-8">
+        <table class="table table-hover table-bordered table-responsive" id="transformer_list">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Faction</th>
+                    <th class="text-center">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let transformer of transformersView" (click)="onClick(transformer)">
+                    <td>{{transformer.name}}</td>
+                    <td>{{transformer.faction.name}}</td>
+                    <td class="text-center">{{transformer.status}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-4">
+        <button class="btn btn-primary" (click)="addNew()">Add</button>
+    </div>
+</div>

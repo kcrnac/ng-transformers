@@ -1,0 +1,99 @@
+<form *ngIf="transformer" class="ui form">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>{{ isEdit ? 'Details' : 'Add '}}</h2>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input [(ngModel)]="transformer.name" class="form-control" name="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="faction">Faction</label>
+                        <select class="form-control" [compareWith]="CompareHelper.compare" [(ngModel)]="transformer.faction" name="faction">
+                            <option *ngFor="let faction of factions" [ngValue]="faction" >{{faction.name}}</option>
+                        </select>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Vehicle</div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for="vehicle-group">Group</label>
+                                <select class="form-control" [(ngModel)]="transformer.vehicle.group" (ngModelChange)="onVehicleGroupChange()"  name="vehicle-group">
+                                    <option value=""></option>
+                                    <option *ngFor="let group of vehicleGroups" [ngValue]="group" >{{group}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="vehicle-type">Type</label>
+                                <select class="form-control" [(ngModel)]="transformer.vehicle.type" (ngModelChange)="onVehicleTypeChange()"  name="vehicle-type" [disabled]="transformer.vehicle.group == ''">
+                                    <option value=""></option>
+                                    <option *ngFor="let type of vehicleTypes" [ngValue]="type" >{{type}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="vehicle-model">Model</label>
+                                <select class="form-control" [(ngModel)]="transformer.vehicle.model"  name="vehicle-model" [disabled]="transformer.vehicle.type == ''">
+                                    <option value=""></option>
+                                    <option *ngFor="let model of vehicleModels" [ngValue]="model" >{{model}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select class="form-control" [(ngModel)]="transformer.status" name="status">
+                    <option *ngFor="let model of statusList" [ngValue]="model" >{{model}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">Gears</label>
+                <div id="gears_table_container">
+                    <table class="table table-bordered table-responsive table-hover">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th class="col-md-2 text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input [(ngModel)]="newGearName" required name="newGear" id="newGear" #newGear="ngModel" class="form-control" placeholder="Gear name" />
+                                </td>
+                                <td class="text-center">
+                                    <button class="btn btn-default" [disabled]="newGear.errors && newGear.errors.required" (click)="addGear()">Add</button>
+                                </td>
+                            </tr>
+                            <tr *ngFor="let g of transformer.gears">
+                                <td>{{g}}</td>
+                                <td class="text-center">
+                                    <i class="glyphicon glyphicon-remove text-danger" (click)="deleteGear(g)"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                    </table>
+                </div>
+                <div *ngIf="newGearErrors && newGearErrors.length" class="alert alert-danger alert-dismissible" role="alert">
+                    <p *ngFor="let err of newGearErrors">{{err}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div clas="row">
+        <div class="col-md-6">
+                <button class="btn btn-primary" (click)="save()">Save</button>
+                <button class="btn btn-default" (click)="goBack()">Back</button>
+                <button *ngIf="isEdit" class="btn btn-danger pull-right" (click)="deleteTransformer()">Remove</button>
+            </div>
+    </div>
+</form>

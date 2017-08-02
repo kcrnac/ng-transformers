@@ -1,0 +1,78 @@
+[
+    /* 1 */
+    {
+        "_id" : "59824d2310983369be8285f9",
+        "name" : "Optimus Prime",
+        "vehicle" : {
+            "group" : "Land",
+            "type" : "Truck",
+            "model" : "Western Star 5700"
+        },
+        "gear" : [ 
+            "sword", 
+            "shield"
+        ],
+        "status" : "OK",
+        "faction" : {
+            "_id" : "59824b3410983369be8285e9",
+            "name" : "Autobot"
+        }
+    },
+
+    /* 2 */
+    {
+        "_id" : "59824f9b10983369be8285fa",
+        "name" : "Bumblebee",
+        "vehicle" : {
+            "group" : "Land",
+            "type" : "Car",
+            "model" : "Camaro"
+        },
+        "gear" : [ 
+            "machine gun"
+        ],
+        "status" : "INJURED",
+        "faction" : {
+            "_id" : "59824b3410983369be8285e9",
+            "name" : "Autobot"
+        }
+    },
+
+    /* 3 */
+    {
+        "_id" : "59824fbf689f8d1ab4212973",
+        "name" : "Megatron",
+        "vehicle" : {
+            "group" : "Air",
+            "type" : "Plane",
+            "model" : "Sukhoi"
+        },
+        "gears" : [ 
+            "canon"
+        ],
+        "status" : "MIA",
+        "faction" : {
+            "_id" : "597cf4b4734d1d58c9abb651",
+            "name" : "Decepticon"
+        }
+    },
+
+    /* 4 */
+    {
+        "_id" : "59825190689f8d1ab4212974",
+        "name" : "test",
+        "vehicle" : {
+            "group" : "Air",
+            "type" : "Helicopter",
+            "model" : "Kamov"
+        },
+        "gears" : [ 
+            "ewfef"
+        ],
+        "status" : "INJURED",
+        "faction" : {
+            "_id" : "59824b3410983369be8285e9",
+            "name" : "Autobot"
+        }
+    }
+]

@@ -1,0 +1,3 @@
+#factions_table_container table tbody tr td:last-child:hover{
+    cursor: pointer;
+}

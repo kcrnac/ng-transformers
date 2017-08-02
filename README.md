@@ -2,6 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.1.
 
+# How to run ng-transformers
+
+1. Open console in the root of downloaded folder (project)
+2. ->cd angular-src
+3. ->npm install
+4. ->npm run ng build
+5. ->cd ..
+6. ->npm install
+7. ->npm start nodemon
+
+App is available on `localhost:3000`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

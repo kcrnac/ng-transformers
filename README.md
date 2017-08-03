@@ -4,13 +4,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # How to run ng-transformers
 
-1. Open console in the root of downloaded folder (project)
-2. ->cd angular-src
-3. ->npm install
-4. ->npm run ng build
-5. ->cd ..
-6. ->npm install
-7. ->npm start nodemon
+- Open console in the root of downloaded folder (project)
+- ->cd angular-src
+- ->npm install
+- ->npm run ng build
+- ->cd ..
+- ->npm install
+- ->npm start nodemon
 
 App is available on `localhost:3000`
 

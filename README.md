@@ -16,5 +16,5 @@ App is available on `localhost:3000`
 
 # Development mode
 
-Execute `npm start` from angular-src folder to run Angular app on `localhost:4200`
-Execute `npm start nodemon` from root folder to start a server on `localhost:3000`
+- Execute `npm start` from angular-src folder to run Angular app on `localhost:4200`.
+- Execute `npm start nodemon` from root folder to start a server on `localhost:3000`.
